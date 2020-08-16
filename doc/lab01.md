@@ -42,7 +42,7 @@ $ docker-compose down
 对于第一个小目标，借助于`docker-compose`工具，可以在本地很方便地搭建`TiDB`集群。具体操作步骤如下，
 
 + 分别fork `pingcap/tidb`, `pingcap/pd`, `tikv/tikv`，并clone到本地，编译。`TiDB`的工程，使用`Makefile`封装了`go build`和`cargo build`的构建逻辑。这里，需要注意的是，在不指定参数直接运行`make`时，默认的构建目标(target)都是优化后的`release`版本，如果需要构建其他版本，比如带调试信息的开发版本等，需要查看`Makefile`获取构建目标。
-+ 准备docker镜像。`tidb`和`pd`已经提供了`Dockerfile`，可以直接使用。`tikv`没有直接提供`Dockerfile`，可以参考[docker hub](https://hub.docker.com/r/pingcap/tikv/dockerfile)上的`Dockerfile`。事实上，`tikv`的`Makefile`里有一个名为`docker`的target，也可以创建镜像。笔者封装了一个`[build_docker.sh(https://raw.githubusercontent.com/hftsin/high-performance-tidb/master/build_docker.sh)`的脚本，用来从本地工程开发目录快速创建`TiDB`的镜像。
++ 准备docker镜像。`tidb`和`pd`已经提供了`Dockerfile`，可以直接使用。`tikv`没有直接提供`Dockerfile`，可以参考[docker hub](https://hub.docker.com/r/pingcap/tikv/dockerfile)上的`Dockerfile`。事实上，`tikv`的`Makefile`里有一个名为`docker`的target，也可以创建镜像。笔者封装了一个[build_docker.sh](https://raw.githubusercontent.com/hftsin/high-performance-tidb/master/build_docker.sh)的脚本，用来从本地工程开发目录快速创建`TiDB`的镜像。
 + 编写`docker-compose.yml`，配置集群环境。这里参考了`pingcap/tidb-docker-compose`，本次作业要求配置1个`pd`实例，3个`tikv`实例，1个`tidb`实例。
 + 测试集群环境。执行`docker-compose up -d`，可以启动`TiDB`集群。此时，可以通过查看各服务实例的日志文件，确认各实例都已经正确启动了。执行`docker-compose down`可以销毁集群。
 
