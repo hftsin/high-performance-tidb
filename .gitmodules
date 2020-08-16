@@ -1,0 +1,9 @@
+[submodule "pd"]
+	path = pd
+	url = git@github.com:hftsin/pd.git
+[submodule "tikv"]
+	path = tikv
+	url = git@github.com:hftsin/tikv.git
+[submodule "tidb"]
+	path = tidb
+	url = git@github.com:hftsin/tidb.git
