@@ -5,7 +5,7 @@
 [线上教学视频](https://space.bilibili.com/86485707/channel/detail?cid=145009)
 
 - 第一次课: [TiDB总体结构](doc/lab01.md)
-- 第二次课：对TiDB进行基准测试
+- 第二次课：[对TiDB进行基准测试](doc/lab02.md)
 - 第三次课：通过工具寻找TiDB瓶颈
 - 第四次课：Execution性能优化
 - 第五次课：DDL性能优化
