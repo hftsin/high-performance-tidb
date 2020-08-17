@@ -7,7 +7,7 @@
 - [三篇文章了解 TiDB 技术内幕 - 说计算](https://pingcap.com/blog-cn/tidb-internal-2/)
 - [三篇文章了解 TiDB 技术内幕 - 谈调度](https://pingcap.com/blog-cn/tidb-internal-3/)
 
-### Homework
+### Problem
 
 >本地下载`TiDB`, `TiKV`, `PD`源代码，改写源码并编译部署以下环境：
 >
