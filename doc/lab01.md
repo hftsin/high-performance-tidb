@@ -61,4 +61,4 @@ $ docker-compose down
 
 具体到代码工程结构上，如[TiDB源码阅读系列文章（二）源码结构](https://pingcap.com/blog-cn/tidb-source-code-reading-2/)所指出的，`store`包是封装了底层存储引擎和sql层的交互。真正的事务是在`TiKV`中实现的，`tidb`只是封装了一个`kv client`，通过调用底层的API来实现事务。
 
-本次作业要求在事务开始时，打印一行日志。因此，可以很直观地从sql语句的执行生命周期入手，寻找事务的开启入口。在 [TiDB 源码阅读系列文章（三）SQL 的一生](https://pingcap.com/blog-cn/tidb-source-code-reading-3/)中，`session`是SQL的核心层。在`session`中定义了两个事务语义相关的操作`StmtCommit`和`StmtRollback`，具体实现都是由成员`session.txn`代理完成。`session.txn`是一个`TxnState`结构，该结构内嵌了一个`kv.Transaction`成员。`kv.Transaction`是一个接口类型，封装了底层`kv store`的事务。进一步追踪，该接口的实现者之一是定义在store/tikv`包中的`tikvTxn`结构。该结构有两个构造函数，分别是`newTiKVTxn`和`newTiKVTxnWithStartTS`，其中前者调用了后者。至此，找到了事务的开启入口。
+本次作业要求在事务开始时，打印一行日志。因此，可以很直观地从sql语句的执行生命周期入手，寻找事务的开启入口。在 [TiDB 源码阅读系列文章（三）SQL 的一生](https://pingcap.com/blog-cn/tidb-source-code-reading-3/)中，`session`是SQL的核心层。在`session`中定义了两个事务语义相关的操作`StmtCommit`和`StmtRollback`，具体实现都是由成员`session.txn`代理完成。`session.txn`是一个`TxnState`结构，该结构内嵌了一个`kv.Transaction`成员。`kv.Transaction`是一个接口类型，封装了底层`kv store`的事务。进一步追踪，该接口的实现者之一是定义在`store/tikv`包中的`tikvTxn`结构。该结构有两个构造函数，分别是`newTiKVTxn`和`newTiKVTxnWithStartTS`，其中前者调用了后者。至此，找到了事务的开启入口。
