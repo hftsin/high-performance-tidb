@@ -32,4 +32,4 @@
 
 ### Solution
 
-[测试报告](https://raw.githubusercontent.com/hftsin/high-performance-tidb/master/bench/tidb_bench_report.md)
+[测试报告](https://github.com/hftsin/high-performance-tidb/blob/master/bench/tidb_bench_report.md)

@@ -21,7 +21,7 @@
 | 组件             | IP地址          | 端口  |
 | ---------------- | --------------- | ----- |
 | PD * 1           | 127.0.0.1       |       |
-| TiDB * 1         |                 |       |
+| TiDB * 1         | 127.0.0.1       |       |
 | TiKV * 3         | 127.0.0.1:20160 | 20160 |
 |                  | 127.0.0.1:20161 | 20161 |
 |                  | 127.0.0.1:20162 | 20162 |
@@ -61,7 +61,7 @@ set global tidb_txn_mode = "pessimistic";
 
 **导入`go-tpc`的数据**：注意控制`warehouses`的大小，以免存储空间过载，在本测试中，设置为`100`。
 
-针对这3类workload，笔者都分别编写了脚本，放在`bench/scripts`目录中，可以方便数据的导入和执行性能测试。
+针对这3类workload，笔者都分别编写了脚本，放在[`bench/scripts`](https://github.com/hftsin/high-performance-tidb/tree/master/bench/scripts)目录中，可以方便数据的导入和执行性能测试。
 
 #### 调整`TiDB`集群的配置
 
@@ -127,4 +127,4 @@ set global tidb_txn_mode = "pessimistic";
 
 ### 附录
 
-上述测试的原始数据及日志存放于`bench/data`目录中。
+上述测试的原始数据及日志存放于[`bench/data`](https://github.com/hftsin/high-performance-tidb/tree/master/bench/data)目录中。
