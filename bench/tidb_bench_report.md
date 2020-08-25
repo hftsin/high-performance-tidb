@@ -98,7 +98,7 @@ set global tidb_txn_mode = "pessimistic";
 
 #### 使用`go-tpc`测试`TiDB`集群
 
-分别使用4，8，16线程运行`tpcc`。
+分别使用4，8，16，32线程运行`tpcc`。
 
 基础配置的测试结果如下：
 
