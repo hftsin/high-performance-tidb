@@ -1,0 +1,32 @@
+***************** properties *****************
+"updateproportion"="0.5"
+"insertproportion"="0"
+"readproportion"="0.5"
+"scanproportion"="0"
+"requestdistribution"="uniform"
+"readallfields"="true"
+"mysql.host"="10.211.55.4"
+"treadcount"="32"
+"recordcount"=""
+"fieldlength"="100"
+"fieldcount"="10"
+"mysql.port"="4000"
+"dotransactions"="true"
+"mysql.db"="ycsbtest_a"
+"operationcount"="100000"
+"maxscanlength"="10"
+"workload"="core"
+**********************************************
+READ   - Takes(s): 10.0, Count: 9438, OPS: 944.0, Avg(us): 530, Min(us): 395, Max(us): 6397, 99th(us): 1000, 99.9th(us): 3000, 99.99th(us): 7000
+UPDATE - Takes(s): 10.0, Count: 9363, OPS: 936.6, Avg(us): 521, Min(us): 374, Max(us): 7968, 99th(us): 1000, 99.9th(us): 4000, 99.99th(us): 8000
+READ   - Takes(s): 20.0, Count: 18954, OPS: 947.8, Avg(us): 528, Min(us): 371, Max(us): 7498, 99th(us): 1000, 99.9th(us): 3000, 99.99th(us): 7000
+UPDATE - Takes(s): 20.0, Count: 18910, OPS: 945.6, Avg(us): 516, Min(us): 374, Max(us): 7968, 99th(us): 1000, 99.9th(us): 3000, 99.99th(us): 8000
+READ   - Takes(s): 30.0, Count: 28298, OPS: 943.3, Avg(us): 529, Min(us): 371, Max(us): 8225, 99th(us): 1000, 99.9th(us): 3000, 99.99th(us): 7000
+UPDATE - Takes(s): 30.0, Count: 28428, OPS: 947.7, Avg(us): 516, Min(us): 374, Max(us): 7968, 99th(us): 1000, 99.9th(us): 3000, 99.99th(us): 6000
+READ   - Takes(s): 40.0, Count: 37593, OPS: 939.9, Avg(us): 531, Min(us): 371, Max(us): 14389, 99th(us): 1000, 99.9th(us): 3000, 99.99th(us): 7000
+UPDATE - Takes(s): 40.0, Count: 37727, OPS: 943.2, Avg(us): 519, Min(us): 374, Max(us): 13089, 99th(us): 1000, 99.9th(us): 3000, 99.99th(us): 8000
+READ   - Takes(s): 50.0, Count: 46818, OPS: 936.4, Avg(us): 533, Min(us): 371, Max(us): 14389, 99th(us): 1000, 99.9th(us): 3000, 99.99th(us): 7000
+UPDATE - Takes(s): 50.0, Count: 47051, OPS: 941.1, Avg(us): 520, Min(us): 374, Max(us): 13089, 99th(us): 1000, 99.9th(us): 3000, 99.99th(us): 6000
+Run finished, takes 53.24793129s
+READ   - Takes(s): 53.2, Count: 49858, OPS: 936.4, Avg(us): 532, Min(us): 371, Max(us): 14389, 99th(us): 1000, 99.9th(us): 3000, 99.99th(us): 7000
+UPDATE - Takes(s): 53.2, Count: 50142, OPS: 941.7, Avg(us): 520, Min(us): 374, Max(us): 13089, 99th(us): 1000, 99.9th(us): 3000, 99.99th(us): 6000

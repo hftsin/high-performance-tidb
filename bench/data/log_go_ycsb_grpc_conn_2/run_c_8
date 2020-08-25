@@ -1,0 +1,26 @@
+***************** properties *****************
+"mysql.port"="4000"
+"mysql.db"="ycsbtest_c"
+"maxscanlength"="10"
+"updateproportion"="0"
+"scanproportion"="0"
+"requestdistribution"="uniform"
+"fieldcount"="10"
+"operationcount"="100000"
+"mysql.host"="10.211.55.4"
+"readallfields"="true"
+"insertproportion"="0"
+"recordcount"=""
+"dotransactions"="true"
+"treadcount"="8"
+"fieldlength"="100"
+"workload"="core"
+"readproportion"="1"
+**********************************************
+READ   - Takes(s): 10.0, Count: 18639, OPS: 1864.2, Avg(us): 532, Min(us): 377, Max(us): 6514, 99th(us): 1000, 99.9th(us): 2000, 99.99th(us): 6000
+READ   - Takes(s): 20.0, Count: 37567, OPS: 1878.5, Avg(us): 528, Min(us): 377, Max(us): 6514, 99th(us): 1000, 99.9th(us): 2000, 99.99th(us): 6000
+READ   - Takes(s): 30.0, Count: 56553, OPS: 1885.2, Avg(us): 526, Min(us): 377, Max(us): 6514, 99th(us): 1000, 99.9th(us): 2000, 99.99th(us): 6000
+READ   - Takes(s): 40.0, Count: 74969, OPS: 1874.3, Avg(us): 529, Min(us): 377, Max(us): 14531, 99th(us): 1000, 99.9th(us): 2000, 99.99th(us): 6000
+READ   - Takes(s): 50.0, Count: 93446, OPS: 1869.0, Avg(us): 530, Min(us): 377, Max(us): 14531, 99th(us): 1000, 99.9th(us): 2000, 99.99th(us): 6000
+Run finished, takes 53.552604824s
+READ   - Takes(s): 53.6, Count: 100000, OPS: 1867.4, Avg(us): 531, Min(us): 377, Max(us): 14531, 99th(us): 1000, 99.9th(us): 2000, 99.99th(us): 6000
