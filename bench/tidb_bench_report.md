@@ -51,7 +51,7 @@ set global tidb_txn_mode = "optimistic";
 数据导入结束之后，需要把配置改回来。
 
 ```mysql
-set global tidb_disable_txn_auto_retry = true;
+set global tidb_disable_txn_auto_retry = on;
 set global tidb_txn_mode = "pessimistic";
 ```
 
